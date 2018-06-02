@@ -1,0 +1,2 @@
+run a basic https server:
+python -m SimpleHTTPServer
