@@ -26,7 +26,7 @@ $("#apiCall").on("click", function() {
     /*
     NY times api call
     */
-    var nyTimesApiUrl = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q="+city+"&sort=newest&api-key=0063f4064e0341569fe419ab1a218be4"
+    var nyTimesApiUrl = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q="+encodeURIComponent(city)+"&sort=newest&api-key=0063f4064e0341569fe419ab1a218be4"
     jQuery.getJSON(nyTimesApiUrl, function(data){
         for (var i = 0; i < data.response.docs.length; i++){
             article = data.response.docs[i]
